@@ -2,7 +2,8 @@ name: Close trial downloads
 on:
   workflow_dispatch:
   schedule:
-    - cron: '3-58/5 * 3 12 *'
+    - cron: '7-57/5 2,3 3 12 *'
+    - cron: '7 4,7,13,19 3 12 *'
     - cron: '7 1,7,13,19 4 12 *'
     - cron: '7 1,7,13,19 5 12 *'
 permissions:
