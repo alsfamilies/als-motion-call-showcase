@@ -22,5 +22,7 @@
 ## 限时下载
 
 <!-- downloads:start -->
-本轮下载即将开放。
+面向所有访客开放。计划关闭时间为北京时间 **2026-12-03 10:06:26**。
+
+[进入限时下载](https://github.com/alsfamilies/als-motion-call-showcase/releases/tag/trial-v0.8.2)
 <!-- downloads:end -->
