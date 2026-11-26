@@ -1,0 +1,22 @@
+name: Close trial downloads
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '3-58/5 * 3 12 *'
+    - cron: '7 1,7,13,19 4 12 *'
+    - cron: '7 1,7,13,19 5 12 *'
+permissions:
+  contents: write
+concurrency: close-trial-downloads
+jobs:
+  close:
+    if: github.repository == 'alsfamilies/als-motion-call-showcase'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - run: python3 .github/close_downloads.py
+        env:
+          GH_TOKEN: ${{ github.token }}
